@@ -1,15 +1,15 @@
-const takeANumber = (currentInLine, name) => {
-
-  if(!currentInLine.includes(name)) {
-    currentInLine.push(name);
-  }
+let count = 0;
+const takeANumber = (currentInLine) => {
   
-  if(currentInLine.length === 7) {
-    return `Don't get your hopes up, you are number 6 in line.`;
-  }
+  //[1,2,3,4]
+  count = count + 1;
+  currentInLine.push(count);
+  //check last element of array 
   
-  return `Welcome, ${name}. You are number ${currentInLine.length} in line.`
+  
+  return `Welcome. You are number ${currentInLine[currentInLine.length-1]} in line.`
 }
+
 
 const nowServing = currentInLine => {
   if(currentInLine.length === 0) {
